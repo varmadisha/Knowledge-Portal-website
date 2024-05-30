@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<center>
+    <h1>subject</h1>
+<form method="post" action="/s_update/{{s.id}}/">
+    {% csrf_token %}
+    <!---{{f.as_p}}--->
+
+
+    <div>
+        <label>sub_id</label>
+        <input type="text" name="sub_id" value="{{s.sub_id}}" class="form-label">
+    </div>
+    <br>
+
+    <div>
+        <label >subject_Name</label>
+        <input type="text" name="subject_name" value="{{s.subject_name}}" class="form-label">
+    </div>
+    <br>
+
+    <div>
+        <label>file</label>
+        <input type="file" name="file" value="{{s.file}}" class="form-label">
+    </div>
+    <br>
+
+
+
+    <button type="submit">submit</button>
+</form>
+</center>
+</body>
+</html>

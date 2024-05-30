@@ -1,0 +1,64 @@
+
+  {% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+<link rel="stylesheet" href="{% static 'css/a.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/b.css' %}">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Website</title>
+    <link rel="stylesheet" href="{% static 'css/adout.css' %}">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+</head>
+<body>
+
+<div class="container-fluid p-0">
+        <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0 px-lg-5">
+            <a href="index.html" class="navbar-brand ml-lg-3">
+                <h1 class="m-0 text-uppercase text-primary"><i class="fa fa-book-reader mr-3"></i> KNOWLEDGE
+                          PORTAL</h1>
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
+                <div class="navbar-nav mx-auto py-0">
+                    <a href="/index/" class="nav-item nav-link active">Home</a>
+                    <a href="/aboutus/" class="nav-item nav-link">About</a>
+
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Course</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="/bca/" class="dropdown-item">BCA</a>
+                            <a href="feature.html" class="dropdown-item">BBA</a>
+                            <a href="team.html" class="dropdown-item">B.com</a>
+                            <a href="testimonial.html" class="dropdown-item">Engineering</a>
+                            <a href="testimonial.html" class="dropdown-item">Architecture</a>
+                        </div>
+                    </div>
+                    <a href="/feedback_u/" class="nav-item nav-link">Feedback</a>
+
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+
+    <section class="about_section" id="About">
+
+         <img src="{% static '/img/a1.png/' %}">
+
+        <div class="about_details">
+            <h1>About Us</h1>
+            <p>	Welcome to the LJKU Knowledge Portal, your central hub for accessing, sharing, and expanding knowledge within our project ecosystem.
+                 This dynamic platform has been meticulously crafted to empower our team with a wealth of information, fostering The Collaboration, innovation, and informed decision-making.•	All type of data knowledge is stored in our website, it is helpful in time management.
+                 LJKU KNOWLEDGE PORTAL Computer base application.
+            </p>
+        </div>
+    </section>
+</body>
+</html>
+

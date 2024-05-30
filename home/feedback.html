@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>feedback</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/a.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/b.css' %}">
+<link rel="stylesheet" href="{% static 'css/feedback.css' %}">
+</head>
+<body>
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid p-0">
+        <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0 px-lg-5">
+            <a href="index.html" class="navbar-brand ml-lg-3">
+                <h1 class="m-0 text-uppercase text-primary"><i class="fa fa-book-reader mr-3"></i> KNOWLEDGE
+                          PORTAL</h1>
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
+                <div class="navbar-nav mx-auto py-0">
+                    <a href="/index/" class="nav-item nav-link active">Home</a>
+                    <a href="/aboutus/" class="nav-item nav-link">About</a>
+
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Course</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="/bca/" class="dropdown-item">BCA</a>
+                            <a href="feature.html" class="dropdown-item">BBA</a>
+                            <a href="team.html" class="dropdown-item">B.com</a>
+                            <a href="testimonial.html" class="dropdown-item">Engineering</a>
+                            <a href="testimonial.html" class="dropdown-item">Architecture</a>
+                        </div>
+
+                    </div>
+                    <a href="/feedback_u/" class="nav-item nav-link">Feedback</a>
+
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+<div class="wrapper centered">
+  <article class="letter">
+    <h1>Feedback</h1>
+    <form method="post" action="/feedback_u/" novalidate>
+      {% csrf_token %}
+      {{form.as_p}}
+
+      <button type="submit" class="btn btn-primary">submit</button>
+    </form>
+  </article>
+
+
+</div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+
+
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/p_record.css' %}">
+    <title>subject</title>
+</head>
+<body bgcolor="gray">
+<span class="bg-primary">
+  <center>
+
+    <div class="r1">
+    <section class="container">
+          <h1><span class="text-primary">subject</span></h1><br>
+
+
+
+     <form method="post" action="/s_create/" enctype="multipart/form-data">
+
+       {% csrf_token %}
+
+<!--{{f.as_p}}-->
+
+  <div class="mb-5">
+    <label for="sub_id" class="form-label">sub_id:</label>
+    <input type="text" name="sub_id" class="form-control" id="sub_id" >
+  </div><br>
+
+         <div class="mb-5">
+    <label for="subject_id" class="form-label">subject_name:</label>
+    <input type="text" name="subject_name" class="form-control" id="subject_id" >
+  </div><br>
+
+  <div class="mb-3 form-check">
+  <label for="fileInput"  class="form-check-label" >file:</label>
+
+    <input type="file" name="file" class="form-control" id="fileInput" >
+  </div><br>
+  <button type="submit" class="btn btn-primary mb-5">Submit</button>
+</form>
+    </center>
+</span>
+</body>
+</html>

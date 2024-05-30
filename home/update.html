@@ -1,0 +1,79 @@
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+          <link rel="stylesheet" type="text/css" href="{% static 'css/p_record.css' %}">
+</head>
+<body>
+<div class="r1">
+    <section class="container">
+<center>
+    <h1>RAGISTRATION</h1>
+<form method="post" action="/update/{{s.id}}/">
+    {% csrf_token %}
+    <!---{{f.as_p}}--->
+
+    <div>
+        <label >Name</label>
+        <input type="text" name="name" value="{{s.name}}" class="form-label">
+    </div>
+    <br>
+
+    <div>
+        <label>faculty_id</label>
+        <input type="text" name="faculty_id" value="{{s.faculty_id}}" class="form-label">
+    </div>
+    <br>
+
+
+    <div>
+        <label>gender</label>
+        <input type="text" name="gender" value="{{s.gender}}" class="form-label">
+    </div>
+    <br>
+
+
+    <div>
+        <label>phone_number</label>
+        <input type="text" name="phone_number" value="{{s.phone_number}}" class="form-label">
+    </div>
+    <br>
+
+
+    <div>
+        <label>Email</label>
+        <input type="Email" name="email" value="{{s.email}}" class="form-label">
+    </div>
+    <br>
+
+    <div>
+        <label>Password</label>
+        <input type="text" name="password" value="{{s.password}}" class="form-label">
+    </div>
+    <br>
+
+    <div>
+        <label>Qualification</label>
+        <input type="text" name="qualification" value="{{s.qualification}}" class="form-label">
+    </div>
+    <br>
+
+    <div>
+        <label>department</label>
+        <input type="text" name="department" value="{{s.department}}" class="form-label">
+    </div>
+    <br>
+
+     <div>
+        <label>designation</label>
+        <input type="text" name="designation" value="{{s.designation}}" class="form-label">
+    </div>
+    <br>
+
+    <button type="submit">submit</button>
+</form>
+</center>
+</body>
+</html>

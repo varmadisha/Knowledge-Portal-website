@@ -1,0 +1,30 @@
+
+
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/p_record.css' %}">
+    <title>form</title>
+</head>
+<body bgcolor="gray">
+<span class="bg-primary">
+  <center>
+
+     <div class="r1">
+    <section class="container">
+          <h1><span class="text-primary">RAGISTRATION</span></h1>
+
+
+
+     <form method="post" action="/create/" novalidate>
+
+       {% csrf_token %}
+        {{form.as_p}}
+         <button type="submit" class="btn btn-primary">submit</button>
+       </form>
+    </center>
+</span>
+</body>
+</html>
